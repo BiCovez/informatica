@@ -2,9 +2,9 @@
 #include <math.h>
 
 /*
-	Realizar un programa que obtenga la derivada de la función en un punto de la
-función y=sen2(x). Ingresando por teclado el valor del punto donde se hará el
-cálculo. Mostrar el valor de la derivada.
+	Realizar un programa que obtenga la derivada de la funcion en un punto de la
+funcion y=sen2(x). Ingresando por teclado el valor del punto donde se hara el
+calculo. Mostrar el valor de la derivada.
 */
 
 int main(){

@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/* Hacer un programa en C que lea diez n�meros reales por teclado y
+/* Hacer un programa en C que lea diez numeros reales por teclado y
 obtenga el promedio de los mismos. */
 
 int main(){

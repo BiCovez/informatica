@@ -2,23 +2,19 @@
 #include <math.h>
 
 /*
-	Realizar un programa en C, que calcule el �rea bajo la curva (integral definida)
-de la funci�n y=sen2(x), usando el m�todo de los rect�ngulos sucesivos, entre
+	Realizar un programa en C, que calcule el area bajo la curva (integral definida)
+de la funcion y=sen2(x), usando el metodo de los rectangulos sucesivos, entre
 dos puntos x1 y x2 que se ingresan por teclado.
 
 */
-
-float potencia(float x) {
-    return pow(sin(x), 2);
-}
 
 double areaBajoCurva(double x1, double x2, int numRectangulos) {
     double deltaX = (x2 - x1) / numRectangulos;
     double area = 0.0;
 
     for (int i = 0; i < numRectangulos; i++) {
-        double xMid = x1 + (i + 0.5) * deltaX; 
-        double altura = potencia(xMid); 
+        double x = x1 + (i + 0.5) * deltaX; 
+        double altura = sin(x) * sin(x); 
         area += altura * deltaX; 
     }
 

@@ -3,7 +3,7 @@
 
 /*
 	Hacer un programa en C que lea 5 valores de muestras de un ensayo, calcule el
-promedio y el valor cuadrático medio del error respecto al promedio
+promedio y el valor cuadratico medio del error respecto al promedio
 */
 
 int main(){

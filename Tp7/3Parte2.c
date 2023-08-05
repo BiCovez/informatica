@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-#define pi 3.14159265358979323846
+#define pi 3.14
 #define valores 81
 #define FILENAME_IN "sen4xValores.txt"
 #define FILENAME_OUT "derivadaValores.txt"
@@ -13,14 +13,10 @@ calcule mediante un método de aproximación, la derivada en cada punto y los gu
 valores en otro archivo. Importarlo con EXCEL y graficar los 2 archivos. 
 */
 
-double derivadaPorAproximacion(float y1, float y2, float h) {
-    return (y2 - y1) / h;
-}
-
 int main() {
     FILE *fp_in, *fp_out;
-    double x, y, y_next;
-    double step = 8 * pi / (valores - 1);
+    double x, y1, y2;
+    double h = 8 * pi / (valores - 1);
 
     fp_in = fopen(FILENAME_IN, "r");
     if (fp_in == NULL) {
@@ -35,13 +31,13 @@ int main() {
         return 1;
     }
 
-    fscanf(fp_in, "%lf %lf", &x, &y);
+    fscanf(fp_in, "%lf %lf", &x, &y1);
     fprintf(fp_out, "%f %f\n", x, 0.0); 
     for (int i = 1; i < valores; i++) {
-        fscanf(fp_in, "%lf %lf", &x, &y_next);
-        float derivada = derivadaPorAproximacion(y, y_next, step);
+        fscanf(fp_in, "%lf %lf", &x, &y2);
+        float derivada = (y1 - y2) / h;
         fprintf(fp_out, "%f %f\n", x, derivada);
-        y = y_next;
+        y1 = y2;
     }
 
     fclose(fp_in);

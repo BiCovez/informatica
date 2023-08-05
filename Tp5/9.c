@@ -11,7 +11,7 @@ float vector3D(float x1, float x2, float y1, float y2, float z1, float z2){
 }
 
 int main(){
-    float x1, x2, y1, y2, z1, z2, vectorResultante;
+    float x1, x2, y1, y2, z1, z2, distancia;
 
     printf("Ingrese el valor de X1: ");
     scanf("%f", &x1);
@@ -26,9 +26,9 @@ int main(){
     printf("\nIngrese el valor de Z2: ");
     scanf("%f", &z2);
 
-    vectorResultante = vector3D(x1, x2, y1, y2, z1, z2);
+    distancia = vector3D(x1, x2, y1, y2, z1, z2);
 
-    printf("El vector resultante de los tres puntos es %.2f", vectorResultante);
+    printf("El vector resultante de los tres puntos es %.2f", distancia);
 
     return 0;
 }

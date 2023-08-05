@@ -2,8 +2,8 @@
 #include <string.h>
 
 /*
-	Realizar un programa en C que lea una cadena y la encripte sumando 3 al c�digo
-ASCII de cada car�cter. Mostrar por pantalla.
+	Realizar un programa en C que lea una cadena y la encripte sumando 3 al codigo
+ASCII de cada caracter. Mostrar por pantalla.
 */
 
 int main(){
@@ -14,7 +14,7 @@ int main(){
 	
 	int longitud = strlen(cadena);
 	if(cadena[longitud - 1] == '\n'){
-		cadena[longitud - 1] = '\0'; // Para eliminar el caracter final de nueva linea
+		cadena[longitud - 1] = '\0'; 
 		longitud--;
 	}
 	

@@ -15,7 +15,7 @@ int main(){
 	
 	int longitud = strlen(cadena);
 	if(cadena[longitud - 1] == '\n'){
-		cadena[longitud - 1] = '\0'; // Para eliminar el caracter final de nueva linea
+		cadena[longitud - 1] = '\0'; 
 		longitud--;
 	}
 	

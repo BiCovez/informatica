@@ -12,14 +12,14 @@ que varía entre 0 y 8π. Importarlo con EXCEL y graficar
 
 */
 
-double funcionPotencia(double x) {
+double potencia(double x) {
     return pow(sin(x), 2);
 }
 
 int main() {
     FILE *fp;
     float x, y;
-    double step = 8 * pi / (valores - 1); 
+    double h = 8 * pi / (valores - 1); 
 
     fp = fopen(FILENAME, "w");
     if (fp == NULL) {
@@ -28,8 +28,8 @@ int main() {
     }
 
     for (int i = 0; i < valores; i++) {
-        x = i * step;
-        y = funcionPotencia(x);
+        x = i * h;
+        y = potencia(x);
         fprintf(fp, "%lf %lf\n", x, y);
     }
 

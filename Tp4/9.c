@@ -4,7 +4,7 @@
 
 /*
 	Ampliar el programa anterior generando un tercer arreglo P, donde cada elemento
-P(i) sea el promedio de los valores de la función para los índices i, i+1 e i+2. Es decir:
+P(i) sea el promedio de los valores de la funcion para los indices i, i+1 e i+2. Es decir:
 P(i)=[S(i)+S(i+1)+S(i+2)]/3. Mostrar en forma de tabla.
 */
 

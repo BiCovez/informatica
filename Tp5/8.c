@@ -6,7 +6,7 @@
 las coordenadas x e y de cada punto como argumentos de la función.
 */
 
-double moduloVector(float x1, float x2, float y1, float y2){
+double distanciaVector(float x1, float x2, float y1, float y2){
     return sqrt((x1-x2)*(x1-x2) + (y1-y2)*(y1-y2));
 }
 
@@ -25,7 +25,7 @@ int main(){
     printf("\nIngrese Y2: ");
     scanf("%f", &y2);
 
-    vector = moduloVector(x1, x2, y1, y2);
+    vector = distanciaVector(x1, x2, y1, y2);
 
     printf("\nLa distancia entre los puntos ingresados es de %.2f", vector);
 

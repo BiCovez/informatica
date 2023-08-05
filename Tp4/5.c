@@ -7,10 +7,10 @@ ordenacion de numeros)
 
 */
 
-void bubblesort(int arreglo[], int tamano) {
+void bubblesort(int arreglo[], int tamaño) {
     int i, j;
-    for (i = 0; i < tamano - 1; i++) {
-        for (j = 0; j < tamano - i - 1; j++) {
+    for (i = 0; i < tamaño - 1; i++) {
+        for (j = 0; j < tamaño - i - 1; j++) {
             if (arreglo[j] > arreglo[j + 1]) {
                 int temp = arreglo[j];
                 arreglo[j] = arreglo[j + 1];
@@ -27,12 +27,12 @@ int main(){
 		scanf("%d", &arreglo[i]);
 	}
 	
-	int tamano = sizeof(arreglo) / sizeof(arreglo[0]);
+	int tamaño = sizeof(arreglo) / sizeof(arreglo[0]);
 
-    bubblesort(arreglo, tamano);
+    bubblesort(arreglo, tamaño);
 
     printf("Array ordenado:\n");
-    for (int i = 0; i < tamano; i++) {
+    for (int i = 0; i < tamaño; i++) {
         printf("%d ", arreglo[i]);
     }
     printf("\n");

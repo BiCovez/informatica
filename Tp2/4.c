@@ -1,10 +1,10 @@
 #include <stdio.h>
 
-/* Hacer un programa en C para calcular el máximo y el mínimo de N
-números leídos por teclado */
+/* Hacer un programa en C para calcular el maximo y el minimo de N
+numeros leidos por teclado */
 
 int main(){
-	int numeroN, max = 0, min = 0;
+	int numeroN = 0, max = 0, min = 0;
 	printf("Ingrese que cantidad de numeros desea ingresar: ");
 	scanf("%d", &numeroN);
 	int numeros[numeroN-1];

@@ -3,7 +3,7 @@
 #define pi 3.14
 
 /*
-	Realizar un programa en C, que muestre 50 valores de la función:
+	Realizar un programa en C, que muestre 50 valores de la funcion:
 y=sen(x) entre x=0 y x=4pi y de la derivada de la misma
 Copiar los valores en una planilla de Excel, graficar y comparar.
 

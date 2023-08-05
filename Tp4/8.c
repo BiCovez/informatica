@@ -4,9 +4,9 @@
 
 /*
 	Realizar un programa donde se rellene dos arreglos de 36 elementos, uno que
-llamaremos S(i)con los valores de la función y=seno(x) para x que varía en 10 grados
+llamaremos S(i)con los valores de la funcion y=seno(x) para x que varï¿½a en 10 grados
 sexagesimales , y el otro arreglo A(i) conteniendo los valores de x. Mostrar los dos
-arreglos en forma de tabla con una columna para el ángulo y otra para la función.
+arreglos en forma de tabla con una columna para el angulo y otra para la funciï¿½n.
 
 */
 
