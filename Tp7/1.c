@@ -12,10 +12,6 @@ que varía entre 0 y 8π. Importarlo con EXCEL y graficar
 
 */
 
-double potencia(double x) {
-    return pow(sin(x), 2);
-}
-
 int main() {
     FILE *fp;
     float x, y;
@@ -29,7 +25,7 @@ int main() {
 
     for (int i = 0; i < valores; i++) {
         x = i * h;
-        y = potencia(x);
+        y = sin(x) * sin(x);
         fprintf(fp, "%lf %lf\n", x, y);
     }
 
