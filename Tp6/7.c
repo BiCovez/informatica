@@ -4,7 +4,7 @@
     Realizar una función que reciba como argumentos 2 matrices de número reales
     de 3x3 y obtenga el producto de las 2 matrices.
 */
-
+/*nazi*/
 void multiplicarMatrices(float matriz1[3][3], float matriz2[3][3]) {
     float resultado[3][3];
 
