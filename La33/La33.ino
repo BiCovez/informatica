@@ -11,9 +11,15 @@ DFRobot_SIM808 sim808(&simSerial);
 // FUNCIONES, CLASES Y OBJETOS
 
 void inicializacion() {
+  int trys = 0;
   while (!sim808.init()) {
     Serial.print("Init error\r\n");
     delay(1000);
+    trys++;
+    if (trys > 10) { // Manejo de error
+      Serial.println("No se pudo inicializar la sim despues de 10 intentos");
+      return;
+    }
   }
   delay(3000);
   Serial.println("Init success");
@@ -34,9 +40,7 @@ void inicializacion() {
 
 class getSms {
   private:
-    char message[MESSAGE_LENGTH], fullMessage[MESSAGE_LENGTH];
-
-    char phone[16], datetime[24];
+    char message[MESSAGE_LENGTH], fullMessage[MESSAGE_LENGTH], phone[16], datetime[24];
 
     int messageIndex = 0;
 
@@ -62,8 +66,13 @@ class getSms {
       //Serial.println(messageIndex);
 
       if (messageIndex > 0) {
-        sim808.readSMS(messageIndex, message, MESSAGE_LENGTH, phone, datetime);
+        bool success = sim808.readSMS(messageIndex, message, MESSAGE_LENGTH, phone, datetime);
 
+        if (!success) {
+          Serial.println("No se pudo leer el sms");
+          return;
+        }
+        
         strcpy(fullMessage, message);
 
         message[strlen(emergencyMessage)] = '\0';
@@ -107,6 +116,7 @@ class getGps {
       }
       else {
         Serial.println("getGPS no funciona");
+        return;
       }
 
     }
