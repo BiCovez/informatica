@@ -15,7 +15,7 @@ for i in range(5):
 # *************************** API MAPS *********************
 
 
-def get_address_by_location(latitude, longitude, api_key='AIzaSyBBda4RyLmJz0B3d0T8vQ-5ZWIvLlBcCJA'):
+def get_address_by_location(latitude, longitude, api_key='APY KEY'):
     """Get address by location coordinates."""
     url = f'https://maps.googleapis.com/maps/api/geocode/json?latlng={latitude},{longitude}&key={api_key}'
     response = requests.get(url)
