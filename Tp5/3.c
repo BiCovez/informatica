@@ -6,14 +6,18 @@ valores de 𝑅1, 𝑅2 y 𝑅3.
 
 */
 
-double valorRequiv(float R1, float R2, float R3){  
+double valorRequiv(float R1, float R2, float R3)
+{
     float denominador = (1 / R1) + (1 / R2) + (1 / R3);
     float rEquivalente = 1 / denominador;
 
     printf("\nEl valor de la resistencia equivalente es de: %.2f", rEquivalente);
+
+    return 0;
 }
 
-int main(){
+int main()
+{
     float R1, R2, R3;
 
     printf("Ingrese el valor de R1: ");

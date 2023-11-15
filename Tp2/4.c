@@ -1,29 +1,19 @@
 #include <stdio.h>
 
-/* Hacer un programa en C para calcular el maximo y el minimo de N
-numeros leidos por teclado */
+// Hacer un programa en C para calcular el factorial de N (N!=1*2*3*...*N)
 
-int main(){
-	int numeroN = 0, max = 0, min = 0;
-	printf("Ingrese que cantidad de numeros desea ingresar: ");
-	scanf("%d", &numeroN);
-	int numeros[numeroN-1];
-	printf("\nIngrese %d numeros para calcular el maximo y minimo\n", numeroN);
-	for(int i = 0; i < numeroN; i++){
-		scanf("%d", &numeros[i]);
+int main()
+{
+	int numeroIngresado;
+	long int factorial;
+	printf("Ingrese un numero para calcular su factorial: \n");
+	scanf("%d", &numeroIngresado);
+	factorial = numeroIngresado;
+	for (int i = 1; i < numeroIngresado; i++)
+	{
+		factorial *= i;
 	}
-	
-	for(int i = 0; i < numeroN; i++){
-		if(numeros[i] > max) max = numeros[i];
-	}
-	min = max;
-	for(int i = 0; i < numeroN; i++){
-		if(numeros[i] < min) min = numeros[i];
-	}
-	
-	printf("El numeros maximo de los ingresados es: %d\n", max);
-	printf("El numero minimo de los ingresados es: %d\n", min);
-	 
+	printf("El factorial del numero %d es: %d", numeroIngresado, factorial);
+
 	return 0;
-	
 }

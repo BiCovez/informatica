@@ -1,32 +1,28 @@
 #include <stdio.h>
-#include <math.h>
 
-// Hacer un programa en C para resolver una ecuaci�n de segundo grado,
-// a.x2+b.x+c=0 ingresando por teclado los coeficientes a,b,c. En el caso de
-// soluciones complejas, emitir un mensaje de error.
+/*  La sucesion de Fibonacci se define de la siguiente forma: a1=1, a2=1 y
+an=an-1+an-2 para n>2, es decir los dos primeros son 1 y el resto cada uno es
+la suma de los dos anteriores, los primeros son: 1, 1, 2, 3, 5, 8, 13, 21,... hacer
+un programa en C para calcular el enesimo termino de la sucesion */
 
+int main() {
+    int n, i;
+    int a = 1, b = 1, c;
 
-int main(){
-	float a, b, c, d, x1, x2;
-	
-	printf( "Introduzca el coeficiente a: " );
-    scanf( "%f", &a );
-	
-    printf( "\nIntroduzca el coeficiente b: " );
-    scanf( "%f", &b );
-	
-    printf( "\nIntroduzca el coeficiente c: " );
-    scanf( "%f", &c );
-	
-	d = b * b - 4 * a * c;
-	
-	if (d >= 0){
-		x1=(-b+sqrt(d)) / (2*a);
-		x2=(-b-sqrt(d)) / (2*a);
-		printf ("x1 = %f \n", x1);
-		printf ("x2 = %f \n", x2);
-		}
-	else {
-		printf ("Error: raices complejas\n");
-	}
+    printf("Ingrese el valor de n: ");
+    scanf("%d", &n);
+
+    if (n == 1 || n == 2) {
+        c = 1;
+    } else {
+        for (i = 3; i <= n; i++) {
+            c = a + b;
+            a = b;
+            b = c;
+        }
+    }
+
+    printf("El enesimo termino de la sucesion de Fibonacci es: %d\n", c);
+
+    return 0;
 }

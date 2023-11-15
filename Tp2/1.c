@@ -1,21 +1,34 @@
 #include <stdio.h>
+#include <math.h>
 
-// Hacer un programa en C que lea 10 números enteros y determine la
-// cantidad de ellos que son divisibles por 3.
+// Hacer un programa en C para resolver una ecuacion de segundo grado,
+// a.x2+b.x+c=0 ingresando por teclado los coeficientes a,b,c. En el caso de
+// soluciones complejas, emitir un mensaje de error.
 
-int main(){
-	int numerosIngresados[10];
-	
-	printf("Ingrese 10 numeros para calcular cuales son divisibles por 3: \n");
-	for(int i = 0; i < 10; i++){
-		scanf("%d", &numerosIngresados[i]);
+int main()
+{
+	float a, b, c, d, x1, x2;
+
+	printf("Introduzca el coeficiente a: ");
+	scanf("%f", &a);
+
+	printf("\nIntroduzca el coeficiente b: ");
+	scanf("%f", &b);
+
+	printf("\nIntroduzca el coeficiente c: ");
+	scanf("%f", &c);
+
+	d = b * b - 4 * a * c;
+
+	if (d >= 0)
+	{
+		x1 = (-b + sqrt(d)) / (2 * a);
+		x2 = (-b - sqrt(d)) / (2 * a);
+		printf("x1 = %f \n", x1);
+		printf("x2 = %f \n", x2);
 	}
-	for(int i = 0; i < 10; i++){
-		if(numerosIngresados[i] % 3 == 0){
-			printf("El numero %d es divisible por 3\n", numerosIngresados[i]);
-		}
+	else
+	{
+		printf("Error: raices complejas\n");
 	}
-	
-	return 0;
 }
-

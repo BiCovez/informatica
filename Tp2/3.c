@@ -1,28 +1,17 @@
 #include <stdio.h>
 
-/*  La sucesion de Fibonacci se define de la siguiente forma: a1=1, a2=1 y
-an=an-1+an-2 para n>2, es decir los dos primeros son 1 y el resto cada uno es
-la suma de los dos anteriores, los primeros son: 1, 1, 2, 3, 5, 8, 13, 21,... hacer
-un programa en C para calcular el enesimo termino de la sucesion */
+/* Hacer un programa en C que lea diez numeros reales por teclado y
+obtenga el promedio de los mismos. */
 
-int main() {
-    int n, i;
-    int a = 1, b = 1, c;
-
-    printf("Ingrese el valor de n: ");
-    scanf("%d", &n);
-
-    if (n == 1 || n == 2) {
-        c = 1;
-    } else {
-        for (i = 3; i <= n; i++) {
-            c = a + b;
-            a = b;
-            b = c;
-        }
-    }
-
-    printf("El enesimo termino de la sucesion de Fibonacci es: %d\n", c);
-
-    return 0;
+int main(){
+	int numerosIngresados[10], suma;
+	printf("Ingrese 10 numeros reales para calcular el promedio\n");
+	for(int i = 0; i < 10; i++){
+		scanf("%d", &numerosIngresados[i]);
+		suma += numerosIngresados[i];
+	}
+	float promedio = suma / 10;
+	printf("El promedio de los numeros ingresados es: %.2f", promedio);
+	
+	return 0;
 }

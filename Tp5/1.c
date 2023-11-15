@@ -5,19 +5,23 @@
 un número real (float). No utilizar la función de la librería math.
 */
 
-double potenciaEnesima(float numero, int potencia){
+double potenciaEnesima(float numero, int potencia)
+{
     float resultadoPotenciado;
 
-    if(potencia > 0){
-        for(int i = 1; i <= potencia; i++){
-            resultadoPotenciado = numero * numero;
+    if (potencia > 0)
+    {
+        for (int i = 1; i <= potencia; i++)
+        {
+            resultadoPotenciado = resultadoPotenciado + numero * numero;
         }
     }
 
     return resultadoPotenciado;
 }
 
-int main(){
+int main()
+{
     float numeroReal, resultado;
     int potencia;
     printf("Ingrese el valor del numero real: ");

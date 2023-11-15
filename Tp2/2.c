@@ -1,17 +1,21 @@
 #include <stdio.h>
 
-// Hacer un programa en C para calcular el factorial de N (N!=1򈭿�...種)
+// Hacer un programa en C que lea 10 n煤meros enteros y determine la
+// cantidad de ellos que son divisibles por 3.
 
 int main(){
-	int numeroIngresado;
-	long int factorial;
-	printf("Ingrese un numero para calcular su factorial: \n"); 
-	scanf("%d", &numeroIngresado);
-	factorial = numeroIngresado;
-	for(int i = 1; i < numeroIngresado; i++){
-		factorial *= i;
+	int numerosIngresados[10];
+	
+	printf("Ingrese 10 numeros para calcular cuales son divisibles por 3: \n");
+	for(int i = 0; i < 10; i++){
+		scanf("%d", &numerosIngresados[i]);
 	}
-	printf("El factorial del numero %d es: %d", numeroIngresado, factorial);
+	for(int i = 0; i < 10; i++){
+		if(numerosIngresados[i] % 3 == 0){
+			printf("El numero %d es divisible por 3\n", numerosIngresados[i]);
+		}
+	}
 	
 	return 0;
 }
+
