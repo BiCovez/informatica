@@ -1,5 +1,7 @@
 Alumno: Maximiliano Juarez Gieco
 
+Grupo: De Biaggio, Juarez.
+
 C
 
 TP2 Completo y listo para corregir
